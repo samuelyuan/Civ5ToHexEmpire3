@@ -58,10 +58,10 @@ type HE3MapTile struct {
 }
 
 type Army struct {
-	X     int32
-	Y     int32
-	Unit1 int32
-	Unit2 int32
+	X      int32
+	Y      int32
+	Unit1  int32
+	Unit2  int32
 	Morale float32
 }
 
@@ -123,6 +123,7 @@ func Serialize(mapData *HE3Map) string {
 	writeString(buffer, mapData.MapAuthor)
 	writeInteger(buffer, mapData.Width)
 	writeInteger(buffer, mapData.Depth)
+
 	/*buffer.WriteByte(mapData.MapStyle.Grass)
 	buffer.WriteByte(mapData.MapStyle.Mountains)
 	buffer.WriteByte(mapData.MapStyle.Desert)
@@ -201,10 +202,10 @@ func DeserializeArmy(
 	}
 
 	return &Army{
-		X:     x,
-		Y:     y,
-		Unit1: unit1,
-		Unit2: unit2,
+		X:      x,
+		Y:      y,
+		Unit1:  unit1,
+		Unit2:  unit2,
 		Morale: morale,
 	}
 }
